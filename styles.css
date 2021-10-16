@@ -1,0 +1,230 @@
+body {
+   background: linear-gradient(180deg, hsl(273, 75%, 66%) 0%, hsl(240, 73%, 65%) 70%);
+   background-repeat: no-repeat;
+   font-size: 12px;
+   font-family: 'Kumbh Sans', sans-serif;
+   color: hsl(238, 29%, 16%);
+   min-height: 100vh;
+   min-height: -webkit-fill-available;
+   display: grid;
+   align-content: center;
+   /* min-height: 100vh; */
+}
+
+main {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-flow: column nowrap;
+}
+
+.main-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-flow: column nowrap;
+   width: 100%;
+}
+
+.image-container {
+   padding-top: 50px;
+   z-index: 2;
+}
+
+img {
+   display: inline-block;
+ }
+ 
+.logo {
+   margin-right: 2rem;
+}
+
+section {
+   background-color: #fff;
+   background-image: url("./images/bg-pattern-mobile.svg");
+   background-repeat: no-repeat;
+   background-position: top center;
+   width: 93%;
+   border-radius: 20px;
+   margin-top: -93px;
+   padding-bottom: 50px;
+   z-index: 1;
+   box-shadow: 0 1rem 1.5rem rgb(0 0 0/ 15%); 
+}
+
+h1 {
+   margin-top: 130px;
+   text-align: center;
+   font-size: 1.5rem;
+   font-weight: 700;
+}
+
+details {
+   margin: 0 2rem 0 2rem;
+   padding: 1rem 0 1rem 0;
+   border-bottom: 1px solid hsl(240, 5%, 91%);
+ }
+
+details>summary {
+   list-style: none;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   cursor: pointer;
+}
+
+ summary::-webkit-details-marker {
+   display: none
+ }
+
+ details[open] > summary > img {
+   transform: rotate(180deg);
+ }
+ 
+ details[open] > summary {
+   font-weight: 700;
+ }
+
+details:not([open]) > summary:hover {
+   color: hsl(14, 88%, 65%);
+}
+  
+footer {
+   margin-top: 3rem;
+}
+
+.attribution { 
+   font-size: 11px; 
+   color: #fff;
+   text-align: center; 
+   text-transform: uppercase;
+}
+
+.attribution a { 
+   text-decoration: none;
+   color: hsl(272, 75%, 87%); 
+}
+
+.attribution a:hover { 
+   text-decoration: underline;
+}
+
+@media (min-width:700px) {
+  
+   body {
+      min-height: -webkit-fill-available;
+   }
+
+   main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 75px;
+   }
+
+   .main-container {
+      flex: 0 0 100%;
+      display: flex;
+      flex-direction: row;
+      background-color: #fff;
+      background-image: url("./images/bg-pattern-desktop.svg");
+      background-repeat: no-repeat;
+      background-size: 80%;
+      background-position: -200% 50%;
+      border-radius: 20px;
+      box-shadow: 0 1rem 1.5rem rgb(0 0 0/ 15%);
+      width: 75%;
+   }
+
+   .main-container::after {
+      content: "";
+      background-image: url("images/illustration-box-desktop.svg");
+      position: absolute;
+      top: 38%;
+      left: 5%;
+      background-repeat: no-repeat;
+      background-size: 75%;
+      z-index: 2;
+      width: 10rem;
+      height: 10rem;  
+   }
+
+   section {
+      flex: 1;
+      background: none;
+      box-shadow: none;
+      margin-top: auto;
+      padding-bottom: auto;
+   }
+
+   h1 {
+      margin-top: 2rem;
+   }
+
+   .image-container {
+      flex: 1;
+      overflow: hidden;
+   }
+
+   .logo {
+      width: 40%;
+      margin-left: -50px;
+      position: fixed;
+      top: 150px;
+   }
+
+   h1 {
+      text-align: left;
+   }
+
+   details {
+      margin-left: 0;
+   }
+
+   .attribution {
+      margin-bottom: 60px;
+   }
+}
+
+@media (min-width: 850px) {
+
+   .main-container {
+      background-position: -197% 65%;
+   }
+
+   .main-container::after {
+      top: 46%;
+      left: 6.5%;
+   }
+   .logo {
+      width: 35%;
+      top: 140px;
+   }  
+}
+
+@media (min-width: 1000px) {
+
+   .main-container::after {
+      top: 40%;
+      left: 8%;
+   }
+
+@media (min-width: 1200px) {
+   .main-container {
+      width: 60%;
+      background-size: 80%;
+      background-position: -16.8rem -9rem;
+   }
+
+   .main-container::after {
+      top: 38%;
+      left: 16%;
+      background-size: 80%;
+   }
+
+   .logo {
+      width: 30%;
+      margin-left: -50px;
+      top: 120px;
+   }
+}
