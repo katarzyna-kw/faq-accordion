@@ -8,7 +8,6 @@ body {
    min-height: -webkit-fill-available;
    display: grid;
    align-content: center;
-   /* min-height: 100vh; */
 }
 
 main {
@@ -30,10 +29,6 @@ main {
    padding-top: 50px;
    z-index: 2;
 }
-
-img {
-   display: inline-block;
- }
  
 .logo {
    margin-right: 2rem;
@@ -110,13 +105,11 @@ footer {
 }
 
 @media (min-width:700px) {
-  
    body {
       min-height: -webkit-fill-available;
    }
 
    main {
-      display: flex;
       justify-content: center;
       align-items: center;
       margin-top: 75px;
@@ -164,9 +157,13 @@ footer {
    .image-container {
       flex: 1;
       overflow: hidden;
+      height: 100%;
+      padding: 0;
+      margin: 0;
    }
 
    .logo {
+      display: block;
       width: 40%;
       margin-left: -50px;
       position: fixed;
