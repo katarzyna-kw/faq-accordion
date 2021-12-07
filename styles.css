@@ -1,14 +1,25 @@
+html {
+   --dark-blue: hsl(238, 29%, 16%);
+   --soft-red: hsl(14, 88%, 65%);
+   --gradient-violet: hsl(273, 75%, 66%);
+   --gradient-blue: hsl(240, 73%, 65%);
+   --dark-gray: hsl(237, 12%, 33%);
+   --med-gray: hsl(240, 6%, 50%);
+   --light-gray: hsl(240, 5%, 91%);
+   --white: hsl(0, 0%, 100%);
+   --attribution-violet: hsl(272, 75%, 87%);
+}
+
 body {
-   background: linear-gradient(180deg, hsl(273, 75%, 66%) 0%, hsl(240, 73%, 65%) 70%);
+   background: linear-gradient(180deg, var(--gradient-violet) 0%, var(--gradient-blue));
    background-repeat: no-repeat;
    font-size: 12px;
    font-family: 'Kumbh Sans', sans-serif;
-   color: hsl(238, 29%, 16%);
+   color: var(--dark-blue);
    min-height: 100vh;
    min-height: -webkit-fill-available;
    display: grid;
    align-content: center;
-   /* min-height: 100vh; */
 }
 
 main {
@@ -30,17 +41,13 @@ main {
    padding-top: 50px;
    z-index: 2;
 }
-
-img {
-   display: inline-block;
- }
  
 .logo {
    margin-right: 2rem;
 }
 
 section {
-   background-color: #fff;
+   background-color: var(--white);
    background-image: url("./images/bg-pattern-mobile.svg");
    background-repeat: no-repeat;
    background-position: top center;
@@ -62,7 +69,7 @@ h1 {
 details {
    margin: 0 2rem 0 2rem;
    padding: 1rem 0 1rem 0;
-   border-bottom: 1px solid hsl(240, 5%, 91%);
+   border-bottom: 1px solid var(--light-gray);
  }
 
 details>summary {
@@ -86,7 +93,7 @@ details>summary {
  }
 
 details:not([open]) > summary:hover {
-   color: hsl(14, 88%, 65%);
+   color: var(--soft-red);
 }
   
 footer {
@@ -102,7 +109,7 @@ footer {
 
 .attribution a { 
    text-decoration: none;
-   color: hsl(272, 75%, 87%); 
+   color: var(--attribution-violet); 
 }
 
 .attribution a:hover { 
@@ -110,13 +117,11 @@ footer {
 }
 
 @media (min-width:700px) {
-  
    body {
       min-height: -webkit-fill-available;
    }
 
    main {
-      display: flex;
       justify-content: center;
       align-items: center;
       margin-top: 75px;
@@ -126,7 +131,7 @@ footer {
       flex: 0 0 100%;
       display: flex;
       flex-direction: row;
-      background-color: #fff;
+      background-color: var(--white);
       background-image: url("./images/bg-pattern-desktop.svg");
       background-repeat: no-repeat;
       background-size: 80%;
@@ -164,9 +169,13 @@ footer {
    .image-container {
       flex: 1;
       overflow: hidden;
+      height: 100%;
+      padding: 0;
+      margin: 0;
    }
 
    .logo {
+      display: block;
       width: 40%;
       margin-left: -50px;
       position: fixed;
@@ -208,6 +217,7 @@ footer {
       top: 40%;
       left: 8%;
    }
+}
 
 @media (min-width: 1200px) {
    .main-container {
