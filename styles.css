@@ -8,10 +8,13 @@ html {
    --light-gray: hsl(240, 5%, 91%);
    --white: hsl(0, 0%, 100%);
    --attribution-violet: hsl(272, 75%, 87%);
+
 }
 
 body {
    background: linear-gradient(180deg, var(--gradient-violet) 0%, var(--gradient-blue));
+   background-attachment: fixed;
+   height: 100%;
    background-repeat: no-repeat;
    font-size: 12px;
    font-family: 'Kumbh Sans', sans-serif;
